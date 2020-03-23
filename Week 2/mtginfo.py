@@ -6,7 +6,7 @@ import json
 # needs to be given a single card object from magicthegathering.io
 def pretty_print_card(card):
     print(card["name"])
-    if card["manaCost"]:
+    if 'manaCost' in card:
         print(card["manaCost"])
     print(card["type"])
     print(int(card["cmc"]))
