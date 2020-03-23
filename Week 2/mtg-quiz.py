@@ -5,6 +5,8 @@
 #                                   #
 #####################################
 
+# API Documentation at: https://scryfall.com/docs/api/cards/random
+
 # libraries
 import requests
 import json
