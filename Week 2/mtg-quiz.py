@@ -17,10 +17,15 @@ def pretty_print_card(card):
         mana_cost = str(card["mana_cost"])
     else:
         mana_cost = ""
+    if 'flavor_text' in card:
+        flavor_text = str(card["flavor_text"])
+    else:
+        flavor_text = ""
     print(card["name"] + " " + mana_cost)
     print(card["type_line"])
     print(card["oracle_text"])
     print("")
+    print(card["flavor_text"])
     ### print out the flavor text if there is flavor text
 
 # main code
@@ -43,7 +48,12 @@ if (answer == card["cmc"]):
 else:
     print("Wrong!  The correct answer is "+str(int(card["cmc"]))+".")
 print("")
-
+Set_Name = input("What is the cards set?(full name)")
+print("")
+if (Set_Name == card["set_name"]):
+    print("Amazing! You are correct!")
+else:
+    print("Nope. The correct answer is "+str(card["set_name"])+".")
 # quiz: What is the set name? (either the set abbreviation or full name is okay)
 
 ### ask the user what the set name is.
