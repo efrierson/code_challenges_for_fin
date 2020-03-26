@@ -26,6 +26,8 @@ def pretty_print_card(card):
     print(card["oracle_text"])
     print("")
     print(flavor_text)
+    print("")
+    print(str(card['prices']['usd']))
     ### print out the flavor text if there is flavor text
 
 # main code
