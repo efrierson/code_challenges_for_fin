@@ -2,7 +2,7 @@
 #                                   #
 #  MTG Quiz                         #
 #  by Eric Frierson                 #
-#                                   #
+#     and Fin Frierson              #
 #####################################
 
 # API Documentation at: https://scryfall.com/docs/api/cards/random
@@ -25,7 +25,7 @@ def pretty_print_card(card):
     print(card["type_line"])
     print(card["oracle_text"])
     print("")
-    print(card["flavor_text"])
+    print(flavor_text)
     ### print out the flavor text if there is flavor text
 
 # main code
@@ -50,7 +50,7 @@ else:
 print("")
 Set_Name = input("What is the cards set?(full name)")
 print("")
-if (Set_Name == card["set_name"]):
+if (Set_Name.lower() == card["set_name"].lower()):
     print("Amazing! You are correct!")
 else:
     print("Nope. The correct answer is "+str(card["set_name"])+".")
