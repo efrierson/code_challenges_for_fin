@@ -21,6 +21,6 @@ print("")
 for card in all_cards['data']:
     print(str(card))
     print(str(card['name']))
-    print(str(card['prices']['usd']))
-    print(str(card['prices']['usd_foil']))
+    print("The normal price is $"+str(card['prices']['usd']))
+    print("The foil price is $"+str(card['prices']['usd_foil']))
     
